@@ -1,0 +1,17 @@
+const express =require("express");
+module.exports = {
+    login: (req,res)=>{
+        try {
+            return res.send({
+                response:"welcome:you are in!"
+            });
+        } catch (error) {
+            return res.send({
+                
+            })
+
+
+            }
+        }
+    },
+};
