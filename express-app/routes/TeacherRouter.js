@@ -1,9 +1,8 @@
 var routes = require ("express").Router();
-const{create,deleteTeacher,getTeacher} = require("../Controller/TeacherController")
-const {createTeacherSchema} = require("../validations/studentValidation")
+const{create,deleteTeacher,getAll} = require("../Controller/TeacherController")
 
-routes.get("/get-all-users",getTeacher)
-routes.post("/create-user",createTeacherSchema,create);
+routes.get("/get-all-users",getAll);
+routes.post("/create-user",create);
 routes.delete("/delete-user", deleteTeacher);
 
 module.exports = routes;

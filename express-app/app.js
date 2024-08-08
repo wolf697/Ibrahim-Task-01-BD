@@ -2,11 +2,9 @@ var createError = require('http-errors');
 var express = require('express');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-var userRouter = require("./routes/userRouter");
-var adminRouter = require("./admin/adminRouter");
-var studentRouter = require(".student/StudentRouter");
-var teacherRouter = require(".teacher/Router");
+var adminRouter = require("./routes/AdminRouter");
+var studentRouter = require("./routes/StudentRouter");
+var teacherRouter = require("./routes/TeacherRouter");
 
 var app = express();
 
@@ -19,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/users', userRouter);
+
 app.use('/admin', adminRouter);
 app.use('/student', studentRouter);
 app.use('/teacher', teacherRouter);

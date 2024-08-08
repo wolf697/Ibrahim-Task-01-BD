@@ -3,10 +3,9 @@ const student = []
 module.exports = {
     create : (req, res) => {
         try {
-            const {username, password} = req.body;
-            student.push(req.body);
+
             return res.send({
-                response : student,
+                response : "Create Student",
             });
         }catch (error) {
             return res.send({
